@@ -4,19 +4,25 @@ from tweepy import Stream
 
 import twitter_credentials
 
+AUTH = OAuthHandler(twitter_credentials.CONSUMER_TOKEN, twitter_credentials.CONSUMER_SECRET)
+AUTH.set_access_token(twitter_credentials.ACCESS_TOKEN, twitter_credentials.ACCESS_TOKEN_SECRET)  
+
 class TwitterStreamer():
     #Class to stream and process tweets of Donald Trump
-
+    
     def stream_tweets(self, filename):
         #handles authentication and connection with Twitter API
 
-        listener = StdOutListener(filename)
-        auth = OAuthHandler(twitter_credentials.CONSUMER_TOKEN, twitter_credentials.CONSUMER_SECRET)
-        auth.set_access_token(twitter_credentials.ACCESS_TOKEN, twitter_credentials.ACCESS_TOKEN_SECRET)
+        listener = StdOutListener(filename) 
 
         #create stream and filter to user @realDonaldTrump
-        stream = Stream(auth, listener)
+        stream = Stream(AUTH, listener)
         stream.filter(follow=["25073877"], is_async=True)
+
+    def post_tweets(self):
+        twitterApi = API(AUTH)
+        api.update_status("Test Tweet")
+        
 
 class StdOutListener(StreamListener):
     #class to process received tweets
@@ -25,7 +31,6 @@ class StdOutListener(StreamListener):
        self.filename = filename
     def on_data(self, data):
         try:
-            print(data)
             with open(self.filename, 'a') as tf:
                 tf.write(data)
             return True
@@ -39,9 +44,10 @@ class StdOutListener(StreamListener):
 
 if __name__ == "__main__":
 
-    filename  = "tweets.json"
+    filename  = "tweets.txt"
     twitter_streamer = TwitterStreamer()
     twitter_streamer.stream_tweets(filename)
+    #twitter_streamer.post_tweets()
     
     
     
