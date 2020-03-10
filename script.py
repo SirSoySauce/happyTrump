@@ -12,7 +12,7 @@ def get_word_dict_from_file(file):
 
 def replace_words_from_dict(dict, string):
     for word, initial in dict.items():
-        string = re.sub(" " + word, " " + initial, string, flags=re.IGNORECASE)
+        string = re.sub('(?<=[?,!.:–"\\s#])' + word + '(?=[?,!.:–"\\s#])', initial, string, flags=re.IGNORECASE)
     return string
 
 
@@ -20,5 +20,4 @@ word_file = open('words.txt', 'r')
 
 word_dict = get_word_dict_from_file(word_file)
 
-print(replace_words_from_dict(word_dict,
-                              "This is an incredible time for our nation—we are in the midst of the Great American Comeback! Jobs are booming, incomes are soaring, poverty is plummeting, confidence is surging, and we have completely rebuilt the awesome power of the U.S. Military. PROMISES MADE, PROMISES KEPT!"))
+print(replace_words_from_dict(word_dict, "Let me get this straight: Democrats and the mainstream media are trying to incite panic over the Coronavirus ...Yet they still push an open border agenda that allows thousands of unchecked & potentially unhealthy migrants to flow into America?"))
