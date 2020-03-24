@@ -34,7 +34,7 @@ timeline = api.user_timeline(user_id="25073877", since_id=latest_tweet_id, tweet
 for tweet in timeline:
     firstText = tweet.full_text
     editedText = replace_words_from_dict(word_dict, firstText)
-    if firstText != editedText and len(editedText) <= 280 and editedText[:2] != 'RT':
+    if firstText != editedText and len(editedText) <= 280 and editedText[-1:] != '…':
         print(firstText)
         api.update_status(status=editedText)
 
