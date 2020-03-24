@@ -2,6 +2,7 @@ america:some other country
 patriot:parrot
 patriots:turtles
 dems:unicorns
+democrat:unicorn
 democrats:unicorns
 mexicans:blue teddy bears
 mexican:blue teddy bear
@@ -15,11 +16,17 @@ china:willy wonka's chocolate factory
 bank:water park
 banks:water parks
 military:pogo stick group
+army:pogo stick group
 wall:sand castle
 walls:sand castles
 border:moat
+borders:moats
 american:baby elephant
 americans:baby elephants
 fake news:messages in bottles
 Russia:Baby Kitten Land
 maga:MakeSandpitsGreatAgain
+trump:Mickey Mouse
+president:anime tiddies expert
+republican:puppy
+republicans:puppies
