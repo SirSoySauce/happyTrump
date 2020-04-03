@@ -11,7 +11,7 @@ U.S.:gummy bear land
 nation:bouncy castle
 country:bouncy castle
 countries:bouncy castles
-great:wiggly
+great:fruity
 china:willy wonka's chocolate factory
 bank:water park
 banks:water parks
@@ -23,10 +23,15 @@ border:moat
 borders:moats
 american:baby elephant
 americans:baby elephants
-fake news:messages in bottles
+fake news:postcards
 Russia:Baby Kitten Land
 maga:MakeSandpitsGreatAgain
 trump:Mickey Mouse
 president:anime tiddies expert
 republican:puppy
 republicans:puppies
+iran:ball pit area
+car:rocking horse
+cars:rocking horses
+\#maga:\#TellYourMotherThatYouLoveHer
+
