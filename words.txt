@@ -34,4 +34,3 @@ iran:ball pit area
 car:rocking horse
 cars:rocking horses
 \#maga:\#TellYourMotherThatYouLoveHer
-
